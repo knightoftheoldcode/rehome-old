@@ -6,13 +6,13 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var lessMiddleware = require('less-middleware');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+const index = require('./app_server/routes/index');
+const users = require('./app_server/routes/users');
 
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'app_server', 'views'));
 app.set('view engine', 'pug');
 
 // uncomment after placing your favicon in /public
