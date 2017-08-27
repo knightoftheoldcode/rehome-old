@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const ctrlMain = require('../controllers/main.js');
+const ctrlAnimals = require('../controllers/animals.js');
 
-/* GET home page. */
-router.get('/', ctrlMain.index);
+/* Animals pages */
+router.get('/animals', ctrlAnimals.index);
+router.get('/animal', ctrlAnimals.show);
 
 module.exports = router;
